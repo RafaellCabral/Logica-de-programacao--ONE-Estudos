@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTES GERAIS</title>
+</head>
+
+<body>
+    <script>
+        //         esse parametro recebe o que eu declarei lá na outra parte
+        function chamada(mostrar) {
+            document.write(mostrar)
+
+        }
+
+        function pular() {
+
+            document.write("<br><br>")
+            document.write("<br>")
+            document.write("<br>")
+
+        }
+
+        let vitorias = parseInt(prompt("Entre com o número de vitórias: "))
+        let empates = parseInt(prompt("Entre com o número de empates:"))
+
+        let pontos = (vitorias * 3) + empates;
+        chamada("Os pontos que o seu time tem é: " + pontos);
+
+        //usamos o parseInt() para transformar um numero que está entre aspas ou seja uma string, em um numero inteiro
+        // como o retorno da função prompt() é sempre string ao utilizar o operador + é aplicado uma concatenação.
+        // Quando parseInt recebe um número e não uma string, ele devolve o mesmo número, ou seja, não realiza conversão alguma. Não dá erro, funcion
+        // o prompt sempre lê como texto
+    </script>
+</body>
+
+</html>

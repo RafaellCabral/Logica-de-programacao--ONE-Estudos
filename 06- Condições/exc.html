@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        
+        body {
+            box-sizing: border-box;
+            background-color: #0082c8;
+            min-width: 300px;
+        }
+        
+        .first {
+            height: 90vh;
+            width: 80%;
+            margin-right: auto;
+            margin-left: auto;
+            background-color: white;
+            border-radius: 7px;
+            margin-top: 2rem;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        }
+        
+        .secound {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .secound label {
+            padding: 1rem;
+            font-family: sans-serif;
+        }
+        
+        input {
+            border: none;
+            width: 15rem;
+            height: 2.5rem;
+            background-color: #dbd8d8;
+            border-radius: 5px;
+        }
+        
+        button {
+            height: 2rem;
+            width: 15rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #65C7F7;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #9CECFB;
+        }
+        
+        h3,
+        h4 {
+            margin-top: 1rem;
+        }
+        
+        h3,
+        h4,
+        p {
+            font-family: sans-serif;
+        }
+        
+        h4 {
+            color: red;
+        }
+        
+        p {
+            padding: 2px;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <section class="first">
+
+        <div class="secound">
+            <label for="notas">1° nota 
+                <input class="primeiro" type="text" placeholder="Digite sua nota">
+            </label>
+            <label for="notas">2° nota
+                <input type="text" class="segundo" placeholder="Digite sua nota">
+            </label>
+            <label for="notas">3° nota
+                <input type="text" placeholder="Digite sua nota" class="terceiro">
+            </label>
+
+            <h3>Situação das notas</h3>
+            <h4>média escolar 7,0 pontos</h4>
+
+            <p>Entre 0 e 3,9 - Reprovado</p>
+            <p>Entre 4 e 6,9 - Recuperação</p>
+            <p>Acima de 7,0 - Aprovado</p>
+
+            <button onclick="clicar()">Calcular</button>
+            <p class="resultado"></p>
+        </div>
+    </section>
+    <script src="exc.js">
+    </script>
+</body>
+
+</html>

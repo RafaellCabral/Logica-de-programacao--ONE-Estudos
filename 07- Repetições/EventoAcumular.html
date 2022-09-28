@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var totalDeEventos = parseInt(prompt("Informe o total de eventos"));
+    var contador = 1;
+    var totalGastoComEventos = 0;
+
+
+    while (contador <= totalDeEventos) {
+        var gasto = parseFloat(prompt("Informe total gasto com evento"));
+        totalGastoComEventos = totalGastoComEventos + gasto;
+        contador++;
+    }
+    var media = totalGastoComEventos / totalDeEventos;
+    mostra("A média de gastos é " + media);
+
+
+    /*
+    O while() só existe para perguntar ao usuário o total gasto
+     por cada evento. A primeira instrução do while() contem a declaração
+      da variável totalGastoComEventos que inicia com valor 0. 
+      Faz sentido, pois neste ponto do programa o usuário ainda não 
+      inseriu os gastos. Em seguida, quando o gasto for informado, capturamos o valor informado 
+      guardando-o na variável gasto. Por fim, somamos o primeiro gasto à variável totalGastoComEventos. Está quase tudo correto, quase!
+
+
+      O problema do código é que na nova iteração do loop que pergunta por outros gastos, 
+      a variável totalGastoComEventos recebe 0 novamente! Ou seja, criamos uma variável para 
+      acumular o gasto do usuário, mas a cada nova pergunta para o usuário, jogamos fora o que já armazenamos e isso não faz sentido.
+
+
+      A solução é inserir a inicialização da variável totalGastoComEventos fora do bloco while(), antes de sua declaração. Da seguinte maneira:
+
+Agora, a variável totalGastoComEventos é iniciada apenas uma vez e dentro do bloco do while() só acumulamos o gasto lido na variável. O código final fica assim:
+
+
+
+
+
+
+
+    */
+</script>

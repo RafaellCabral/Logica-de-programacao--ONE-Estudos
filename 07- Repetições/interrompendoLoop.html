@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+<script>
+    function chamada(mostrar) {
+        document.write(mostrar)
+
+    }
+
+    function pular() {
+
+        document.write("<br><br>")
+        document.write("<br>")
+        document.write("<br>")
+
+    }
+
+    let numero = Math.round(Math.random() * 10);
+    let tentativas = 1
+
+    //console.log(numero); // esse console vai exibir no console do navegador o numero sorteado
+    while (tentativas <= 3) {
+
+        let chute = parseInt(prompt("Entre com um número :"))
+        if (chute == numero) {
+            document.write("Parabéns, você ACERTOU !!!  O número pensado foi   " + numero)
+            pular()
+                // o break vai parar de rodar o loop após o usuario digitar o número correto.
+            break
+        } else if (chute !== numero) {
+            document.write("Você errou !  ")
+            pular()
+        }
+        tentativas++
+
+    }
+</script>

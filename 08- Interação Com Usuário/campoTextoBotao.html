@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<input type="text">
+<button>Verificar</button>
+
+
+<script>
+    let input = document.querySelector("input")
+    input.focus() // isso aqui vai fazer o campo input ganhar foco logo quando a página é recarregada 
+    let clicar = document.querySelector("button");
+    // esse comando o botao esta recebendo apenas o que vai ser executado dentro da função, portanto não precisa de parenteses.
+    clicar.onclick = verificar;
+
+
+    let numeroSecreto = Math.round(Math.random() * 100)
+    console.log(numeroSecreto)
+
+    function verificar() {
+        if (input.value == numeroSecreto) {
+            alert("Você acertou ! Parabéns.")
+        } else {
+            alert("Você errou !")
+
+        }
+        // esse comando vai limpar o input toda vez que eu errar ou acertar, e clicar no botão
+        input.value = "";
+        input.focus();
+    }
+</script>

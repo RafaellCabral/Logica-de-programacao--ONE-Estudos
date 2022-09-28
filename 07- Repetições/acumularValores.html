@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<script>
+    function pular() {
+        document.write("<br>");
+    }
+
+    function mostrar(conteudo) {
+        pular()
+        document.write(conteudo);
+    }
+    // acumulando valores
+    // eu posso querer somar os salários dos funcionários, renda mensal, e etc. com esse acumulador de valores
+
+    let idadeFamiliar = parseInt(prompt("Quantos familiares você tem"));
+    let numero = 1;
+    // essa variável deve estar do lado de fora para que o programa possa rodar e armazenar as idades dentro dela
+    // caso a variável fique dentro do while ela vai rodar e no próximo laço ele vai apagr e começar do 0, ou seja, os dados serão afetados e o resultado ficará errado !!!!!
+    let totalIdades = 0
+    while (numero <= idadeFamiliar) {
+        let conta = parseInt(prompt("digite a idade de cada um "));
+        totalIdades = totalIdades + conta;
+        numero++
+    }
+    let total = totalIdades / idadeFamiliar
+    mostrar("total  " + total);
+    mostra("fim")
+
+
+
+
+    /*let idadeRafael = 21;
+  let idadeIsaac = 22;
+  let idadeAna = 25;
+  
+  let idadeTotal = (idadeRafael + idadeIsaac + idadeAna) 
+  let total = parseInt(idadeTotal/3)
+*/
+</script>

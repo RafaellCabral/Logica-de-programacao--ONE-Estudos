@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<script>
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+
+    let anoCopa = 1930;
+    let limite = parseInt(prompt("Digite uma data para descobrir quantas copas houveram até  esse momento"))
+        //se recebe true ele vai sempre repetir o que está dentro do bloco
+        // se for false ele não executa nada
+        //se deixar apenas true dentro do parenteses ele vai rodar infinitamente até travar 
+    while (anoCopa <= limite) {
+        mostra("Os anos que tiveram copa foram:  " + anoCopa)
+        anoCopa = anoCopa + 4;
+    }
+</script>

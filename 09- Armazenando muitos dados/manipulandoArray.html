@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+<input type="text">
+<button>Verificar</button>
+
+
+<script>
+    let input = document.querySelector("input");
+    input.focus();
+    let numeroSecreto = [8, 2, 15, 17];
+    let segredos = sorteiaSegredos(4);
+
+
+
+    function sorteia() {
+        return Math.round(Math.random() * 10)
+
+    }
+
+    function sorteiaSegredos(quantidade) {
+        let segredos = [];
+        let numero = 1;
+
+        while (numero <= quantidade) {
+            segredos.push(sorteia());
+            numero++
+        }
+
+        return segredos;
+    }
+
+
+
+
+
+
+    function verificar() {
+        let achou = false;
+        for (let posicao = 0; posicao = numeroSecreto.length; posicao++) {
+            if (input.value == numeroSecreto[posicao]) {
+                alert("Você acertou ! Parabéns.")
+                achou = true;
+                break
+            }
+        }
+        if (achou == false) {
+            alert("Você errou !")
+        }
+        input.value = "";
+        input.focus();
+    }
+
+    let clicar = document.querySelector("button");
+    clicar.onclick = verificar();
+</script>

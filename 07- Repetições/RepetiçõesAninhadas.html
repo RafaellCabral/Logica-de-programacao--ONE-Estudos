@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+    function chamada(mostrar) {
+        document.write(mostrar)
+
+    }
+
+    function pular() {
+
+        document.write("<br><br>")
+            //document.write("<br>")
+            //document.write("<br>")
+
+    }
+    //o primeiro for é para controlar as linhas ou seja 5
+    // o segundo for é para completar as linhas com asteriscos
+    for (let linha = 1; linha <= 5; linha++) {
+
+        for (let coluna = 1; coluna <= 10; coluna++) {
+            chamada("*")
+        }
+        pular()
+    }
+</script>

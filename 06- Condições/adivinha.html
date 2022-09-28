@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTES GERAIS</title>
+</head>
+
+<body>
+    <script>
+        //         esse parametro recebe o que eu declarei lá na outra parte
+        function chamada(mostrar) {
+            document.write(mostrar)
+
+        }
+
+        function pular() {
+
+            document.write("<br><br>")
+            document.write("<br>")
+            document.write("<br>")
+
+        }
+
+        let numero = Math.round(Math.random() * 100);
+        console.log(numero); // esse console vai exibir no console do navegador o numero sorteado
+        let chute = parseInt(prompt("Entre com um número :"))
+        if (chute == numero) {
+            document.write("Parabéns, você acertou !")
+        } else if (chute !== numero) {
+            document.write("Você errou, onumero pensado foi  " + numero)
+        }
+
+        // Math.random() vai gerar um numero aleatório
+        //
+    </script>
+</body>
+
+</html>
